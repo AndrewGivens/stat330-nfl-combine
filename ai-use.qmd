@@ -1,0 +1,51 @@
+---
+title: "AI Use and Verification"
+description: "A concise record of AI-supported work on this project."
+author: "Andrew Walker, Andrew Givens"
+---
+
+This page is a work log, not a second report. Short bullets are welcome. It is separate from the final case study and does not count toward the 750 to 1,000 word range.
+
+## Starting point
+
+**AI system and date:** Replace.
+
+- **Question:** Which combine measurements and player position predict draft round among drafted players?
+- **Core model:** Ordinal logistic regression (`ordinal::clm`, logit link) of draft round on standardized 40-yard dash, vertical jump, bench reps, broad jump, three-cone, and shuttle, plus position.
+- **Baseline result:** Among 1,930 drafted players with complete data, a one-standard-deviation slower 40-yard dash was associated with 2.30 times the cumulative odds of being drafted in a later round, holding the other measurements and position constant (approximate 95% CI [1.81, 2.92], p < .001).
+- **Limitation or opportunity:** Players missing any included measurement were excluded, so the result may not represent all drafted players if those omissions were systematic.
+
+## Substantive prompts
+
+Paste the exact prompts that shaped the extension. Include the customized extension-selection prompt from the checkpoint and any important implementation follow-ups. Delete unused prompt blocks.
+
+> I am creating a regression case study in R and Quarto. My question is: which combine measurements and player position predict draft round among drafted NFL players? The response is draft round (ordered categorical, rounds 1–7), the main predictors are 40-yard dash, vertical jump, bench reps, broad jump, three-cone, shuttle (all standardized), and position (categorical), and my course-based core model is an ordinal logistic regression (ordinal::clm, logit link). My main result so far is that among 1,930 drafted players with complete data, a 1-SD slower 40-yard dash was associated with 2.30 times the cumulative odds of being drafted in a later round (95% CI 1.81–2.92), holding other measurements and position constant. I found this limitation or opportunity: players missing any measurement were dropped, so results may not represent all drafted players if missingness is systematic. Suggest three feasible extensions that keep the core analysis connected to regression methods taught in my class. One option may be a model not taught in class used as a comparator. For each, explain how it strengthens the same research question, how its result would enter the final case study, the implementation steps, and two ways I could verify it. Do not choose for me.
+
+> Replace with another exact prompt, if needed.
+
+## Selected extension
+
+**TODO (group): name the extension you chose, why it responds to the limitation above, and where its result will appear on the case-study page.**
+
+## My decisions
+
+- **Accepted:** What useful advice did you use?
+- **Changed:** What did you adapt to fit your data or goals?
+- **Rejected or corrected:** What advice was unsuitable, unnecessary, or wrong?
+
+**Connection to the final case study:** Identify where the extension's method and result appear on the final page and how they strengthen the course-based analysis.
+
+## Independent verification
+
+1. **Check and result:** Replace with an official source, diagnostic, simulation, manual calculation, comparison with a known method, or another suitable check.
+2. **Check and result:** Replace with a different check and what you learned.
+
+Link or cite verification sources where appropriate. A second AI response does not count as independent verification.
+
+## Remaining limitation
+
+**State one important uncertainty, failure mode, or limitation that remains.**
+
+## Other AI use, if any
+
+**Briefly disclose earlier debugging, proofreading, or other AI assistance. Write “None” if there was no other use.**
